@@ -26,7 +26,8 @@ jobs:
       - name: Auto merge
         if: ${{ env.ALLOW_MERGE != 'false' }}
         run: |
-          git config --global pull.ff only user.name  'L1901' 
+          git config --global pull.ff only
+          git config --global user.name  'L1901' 
           git config --global user.email '18210850006@fudan.edu.cn'
           git remote add upstream https://github.com/k652/daily_fudan
           git pull upstream master --allow-unrelated-histories
